@@ -8,7 +8,9 @@ class S1L6:
 
     def __init__(self, file_name: str):
         self.input_data = b64decode(open(file_name,'rb').read())
+        # sets it to self.BLOCKSIZE
         self.find_keysize()
+
         self.t_data = self.transpose()
         self.repeated_key = self.find_repeated_key()
 
