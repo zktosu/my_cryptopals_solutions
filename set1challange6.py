@@ -59,7 +59,7 @@ class S1L6:
             res += chr(b ^ key)
         return res
 
-    def decrypt_rk(self, data):
+    def decrypt_key(self, data):
         res = []
         for key in range(255):
             res.append( (self.english_score(self.xor_key(data, key)), key) )
@@ -68,7 +68,7 @@ class S1L6:
     def find_repeated_key(self):
         res = ''
         for data in self.t_data:
-            res += chr(self.decrypt_rk(data))
+            res += chr(self.decrypt_key(data))
         return res
 
     def repeated_key_xor(self,key):
