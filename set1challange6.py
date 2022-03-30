@@ -80,3 +80,6 @@ class S1L6:
 if __name__ == '__main__':
     o = S1L6('6.txt')
     print(o.repeated_key)
+    # test for the un-encrypted result ;)
+    print('='*100)
+    print(o.repeated_key_xor(o.repeated_key)[:200])
