@@ -73,6 +73,7 @@ class S1L6:
             res += chr(self.decrypt_key(data))
         return res
 
+    # this is a utility function to use the found key.
     def repeated_key_xor(self,key):
         res = ''
         for i,b in enumerate(self.input_data):
