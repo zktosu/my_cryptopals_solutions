@@ -13,6 +13,13 @@ def read_file(fname):
     return base64.b64decode(open(fname,'rb').read())
 
 if __name__ == '__main__':
+    ''' this challenge was about how to use AES with python
+    - import AES
+    - create new cipher ( could be used to decrypt or encrypt)
+    - give it the key
+    - decrypt file, 
+    - unpad to make sure that it gives the correct result 
+    '''
     all_text = read_file('7.txt')
     cipher = AES.new(key, AES.MODE_ECB)
     # test, make sure you get b'sample' with this test.
